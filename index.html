@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C105</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ML5 -->
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <!-- webcam.js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js' integrity='sha512-AQMSn1qO6KN85GOfvH6BWJk46LhlvepblftLHzAv1cdIyTWPBKHX+r+NOXVVw6+XQpeW4LJk/GTmoP48FLvblQ==' crossorigin='anonymous'></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container d-grid gap-4">
+        <h1 class="text-bg-light text-center p-2">Identificador de Ibagens</h1>
+        
+        <h3 class="">O modelo foi treinado para reconhecer estes objetos:</h3>
+
+        <b class="">
+            Caneca<hr>
+            Fone de ouvido<hr>
+            Garrafa<hr>
+        </b>
+
+        <h4>Webcam:</h4>
+        <div id="camera" class="mx-auto"></div>
+        <div id="result" class="mx-auto"></div>
+        <div class="container-flex mx-auto">
+            <button onclick="snap()" class="btn btn-info">Capturar Ibagem</button>
+        </div>
+        <div class="container-flex mx-auto">
+            <button onclick="check()" class="btn btn-success">Identificar Ibagem</button>
+        </div>
+
+        <h3 class="">Objeto: <span id="objectName"></span></h3>
+        <h3 class="">Precisão: <span id="objectAccuracy"></span></h3>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
