@@ -10,7 +10,7 @@ const classifier = ml5.imageClassifier(modelLink, modelLoaded)
 
 Webcam.set({
     width: 360,
-    height: 250,
+    height: 270,
     image_format: 'png',
     png_quality: 90
 });
